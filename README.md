@@ -1,4 +1,4 @@
-# LLM-Threads
+# LLM threads Bot
 This project is based on my idea: `how if I can make an LLM as a writer in my Threads to make me famous 🤣`
 
 ## Introduction
