@@ -1,0 +1,39 @@
+name: LLM-Threads Daily Tweet
+
+on:
+  schedule:
+    - cron: "0 2 * * *" # Runs every day at 12:00 UTC
+  workflow_dispatch:
+
+jobs:
+  tweet:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.9"
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Set up .env file
+        run: |
+          echo "USERNAME=${{ secrets.USERNAME }}" >> .env
+          echo "PASSWORD=${{ secrets.PASSWORD }}" >> .env
+          echo "GROQ_API_KEY=${{ secrets.GROQ_API_KEY }}" >> .env
+
+      - name: Run Script
+        run: python main.py
+
+      - name: Archive Logs
+        uses: actions/upload-artifact@v2
+        with:
+          name: log
+          path: .log
