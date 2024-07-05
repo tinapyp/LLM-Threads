@@ -1,5 +1,5 @@
 # LLM-Threads
-This project is based on my idea: `how if I can make an LLM as a writer in my Threads to make me famous 🤣`.
+This project is based on my idea: `how if I can make an LLM as a writer in my Threads to make me famous 🤣`
 
 ## Introduction
 LLM-Threads leverages the power of large language models (LLMs) to automate the creation and posting of engaging social media content, specifically designed for daily tweets about Python, data science, SQL, and machine learning. The goal is to gain 10k followers in 100 days by consistently sharing valuable and interesting content.
