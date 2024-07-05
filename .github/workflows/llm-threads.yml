@@ -2,7 +2,7 @@ name: LLM-Threads Daily Tweet
 
 on:
   schedule:
-    - cron: "0 2 * * *" # Runs every day at 12:00 UTC
+    - cron: "0 2 * * *"
   workflow_dispatch:
 
 jobs:
