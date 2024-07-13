@@ -3,6 +3,7 @@ import logging
 from datetime import datetime
 from src.model import create_chat_completion
 from threadspy import ThreadsAPI
+from dotenv import load_dotenv
 from src.utils import truncate_to_character_limit, extract_after_result
 
 logging.basicConfig(
@@ -12,8 +13,10 @@ logging.basicConfig(
     level=logging.INFO,
 )
 
-USERNAME = os.environ.get("USERNAME")
-PASSWORD = os.environ.get("PASSWORD")
+load_dotenv()
+
+USERNAME = os.environ["USERNAME"]
+PASSWORD = os.environ["PASSWORD"]
 
 # Ensure credentials are available
 if not USERNAME or not PASSWORD:
