@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  tweet:
+  post:
     runs-on: ubuntu-latest
 
     steps:
